@@ -1,0 +1,31 @@
+# Alacritty TOML config file
+
+
+[window]
+
+opacity = 0.8
+
+# padding.x = 5
+# padding.y = 5
+# dynamic_padding = true
+
+[font]
+
+normal.family = "JetBrainsMono Nerd Font"
+bold.family = "JetBrainsMono Nerd Font"
+italic.family = "JetBrainsMono Nerd Font"
+bold_italic.family = "JetBrainsMono Nerd Font"
+
+size = 9.0
+
+[cursor]
+
+style.shape = "Underline"
+style.blinking = "Always"
+
+blink_interval = 500
+blink_timeout = 0
+
+[mouse]
+
+hide_when_typing = true

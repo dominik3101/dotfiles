@@ -1,0 +1,32 @@
+window {
+background-color: --wofi-color0;
+border: 3px solid --wofi-color1;
+margin: 10px;
+}
+
+#input {
+font-family: JetBrainsMono Nerd Font;
+font-size: 12px;
+color: --wofi-color2;
+background-color: --wofi-color0;
+border: 3px solid --wofi-color1;
+border-radius: 0px;
+margin: 10px;
+}
+
+#scroll {
+margin: 10px;
+border: 3px solid --wofi-color1;
+background-color: --wofi-color0;
+}
+
+#text {
+font-family: JetBrainsMono Nerd Font;
+font-size: 12px;
+color: --wofi-color2;
+margin: 5px;
+}
+
+#entry:selected {
+background-color: rgba(--wofi-rgb-color1, 0.5);
+}  

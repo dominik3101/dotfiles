@@ -1,0 +1,7 @@
+prompt =
+mode = drun
+insensitive = true
+location = left
+color = /home/dominik/.config/wofi/colors
+height = 1055
+width = 500
