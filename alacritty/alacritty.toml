@@ -1,0 +1,18 @@
+#Alacritty TOML config file
+
+[window]
+
+opacity = 0.7
+
+[font]
+
+normal.family = "JetBrainsMono Nerd Font"
+bold.family = "JetBrainsMono Nerd Font"
+italic.family = "JetBrainsMono Nerd Font"
+bold_italic.family = "JetBrainsMono Nerd Font"
+
+size = 9.0
+
+[mouse]
+
+hide_when_typing = true
