@@ -21,13 +21,17 @@ static const char *colors[][3]      = {
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6" };
 
+static const char ptagf[] = "[%s: %s]";	/* format of a tag label */
+static const char etagf[] = "[%s]";	/* format of an empty tag */
+static const int lcaselbl = 1;		/* 1 means make tag label lowercase */	
+
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      	     instance    title    tags mask     isfloating   CenterThisWindow?     monitor */
-	{ "alacritty",       NULL,       NULL,    0,            0,     	     1,		           -1 },
+	{ "Alacritty",       NULL,       NULL,    0,            0,     	     1,		           -1 },
 	{ "Gimp",            NULL,       NULL,    0,            1,           0,                    -1 },
 	{ "Firefox",         NULL,       NULL,    1 << 8,       0,           0,                    -1 },
 };

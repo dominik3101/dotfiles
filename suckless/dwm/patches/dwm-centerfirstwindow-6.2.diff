@@ -59,9 +59,9 @@ diff -up dwm-6.2-orig/dwm.c dwm-6.2-modd/dwm.c
 +	if (n == 1 && selmon->sel->CenterThisWindow)
 +        resizeclient(selmon->sel,
 +                (selmon->mw - selmon->mw * 0.5) / 2,
-+                (selmon->mh - selmon->mh * 0.5) / 2,
++                (selmon->mh - selmon->mh * 0.8) / 2,
 +                selmon->mw * 0.5,
-+                selmon->mh * 0.5);
++                selmon->mh * 0.8);
  }
  
  void
