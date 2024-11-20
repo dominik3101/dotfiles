@@ -17,8 +17,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Set mapleader and maplocalleader
-vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.mapleader = ";"
+vim.g.maplocalleader = ";"
 -- Show line numbers
 vim.opt.number = true
 -- Window splitting
