@@ -23,7 +23,15 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6" };
 
 static const char ptagf[] = "[%s: %s]";	/* format of a tag label */
 static const char etagf[] = "[%s]";	/* format of an empty tag */
-static const int lcaselbl = 1;		/* 1 means make tag label lowercase */	
+static const int lcaselbl = 0;		/* 1 means make tag label lowercase */	
+
+static const char ptagf[] = "[%s %s]";	/* format of a tag label */
+static const char etagf[] = "[%s]";	/* format of an empty tag */
+static const int lcaselbl = 0;		/* 1 means make tag label lowercase */	
+
+static const char ptagf[] = "[%s %s]";	/* format of a tag label */
+static const char etagf[] = "[%s]";	/* format of an empty tag */
+static const int lcaselbl = 0;		/* 1 means make tag label lowercase */	
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -31,7 +39,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      	     instance    title    tags mask     isfloating   CenterThisWindow?     monitor */
-	{ "Alacritty",       NULL,       NULL,    0,            0,     	     1,		           -1 },
+	{ "Alacritty",       NULL,       NULL,    0,            0,     	     0,		               -1 },
 	{ "Gimp",            NULL,       NULL,    0,            1,           0,                    -1 },
 	{ "Firefox",         NULL,       NULL,    1 << 8,       0,           0,                    -1 },
 };
@@ -66,16 +74,20 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]   = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg1, "-nf", col_fg1, "-sb", col_orange, "-sf", col_fg2, NULL };
 static const char *termcmd[]    = { "alacritty", NULL };
 static const char *browsercmd[] = { "firefox", NULL };
+static const char *discordcmd[] = { "discord", NULL };
 static const char *voldowncmd[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05-"};
 static const char *volupcmd[]   = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05+"};
+static const char *screenshotcmd[] = { "flameshot", "gui", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_m,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_t,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      spawn,          {.v = browsercmd } },
+    { MODKEY,                       XK_d,      spawn,          {.v = discordcmd } },
 	{ MODKEY,                       XK_F2,     spawn,          {.v = voldowncmd } },
 	{ MODKEY,                       XK_F3,     spawn,          {.v = volupcmd } },
+    { 0,                            XK_Print,  spawn,          {.v = screenshotcmd } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
